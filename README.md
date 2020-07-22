@@ -9,7 +9,7 @@ In this article, we are going to highlight the inputview when the user provided 
 
 The output of the application will be something like this:
 
-[validate with required verification](Output.png)
+![validate with required verification](Output.jpg)
 
 As you can above, I’m highlighting the border of TextInputLayout with a different color using ErrorColor  and also the error message is displaying below the inputview to fill the input field.
 
