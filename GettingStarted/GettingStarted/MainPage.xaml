@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GettingStarted"
+              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             x:Class="GettingStarted.MainPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="15">
+            <inputLayout:SfTextInputLayout Hint="Email" 
+                                       x:Name="emailField"
+                                       ErrorColor="Red" 
+                                       FocusedColor="Blue"
+                                       ContainerType="Outlined">
+                <inputLayout:SfTextInputLayout.Triggers>
+                    <DataTrigger TargetType="inputLayout:SfTextInputLayout" 
+                             Binding="{Binding Source={x:Reference emailentry},Path=Text.Length}" 
+                             Value="0">
+                        <Setter Property="HasError" Value="True"/>
+                        <Setter Property="ErrorText" Value="Email is empty"/>
+                    </DataTrigger>
+                </inputLayout:SfTextInputLayout.Triggers>
+                <Entry x:Name="emailentry" />
+            </inputLayout:SfTextInputLayout>
+
+            <inputLayout:SfTextInputLayout Hint="Password" 
+                                       x:Name="passwordField"
+                                       ErrorColor="Red"    
+                                       FocusedColor="Blue"
+                                       ContainerType="Outlined"                                                
+                                       EnablePasswordVisibilityToggle="true">
+                <inputLayout:SfTextInputLayout.Triggers>
+                    <DataTrigger TargetType="inputLayout:SfTextInputLayout" 
+                             Binding="{Binding Source={x:Reference pwdentry},Path=Text.Length}" 
+                             Value="0">
+                        <Setter Property="HasError" Value="True"/>
+                        <Setter Property="ErrorText" Value="Password is empty"/>
+                    </DataTrigger>
+                </inputLayout:SfTextInputLayout.Triggers>
+                <Entry x:Name="pwdentry" />
+            </inputLayout:SfTextInputLayout>
+
+            <Button Text="Next" BackgroundColor="Black" TextColor="White" 
+                WidthRequest="100" HorizontalOptions="Center"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
