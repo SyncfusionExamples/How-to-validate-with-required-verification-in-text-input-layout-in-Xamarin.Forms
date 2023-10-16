@@ -1,23 +1,47 @@
+# Adding SfTextInputLayout reference
+You can add SfTextInputLayout reference using one of the following methods:
+
+## Method 1: Adding SfTextInputLayout reference from nuget.org
+
+Syncfusion Xamarin components are available in nuget.org. To add SfTextInputLayout to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Xamarin.Core, and then install it.
+
+
+## Method 2: Adding SfTextInputLayout reference from toolbox
+
+Syncfusion also provides Xamarin Toolbox. Using this toolbox, you can drag the Xamarin Text Input Layout (SfTextInputLayout) control to the XAML page. It will automatically install the required NuGet packages and add the namespace to the page. To install Syncfusion Xamarin Toolbox, refer to Toolbox.
+
+## Method 3: Adding SfTextInputLayout assemblies manually from the installed location
+
+If you prefer to manually reference the assemblies instead referencing from NuGet, add the following assemblies in respective projects.
+
+# Initializing text input layout
+Import the SfTextInputLayout control namespace in respective page as demonstrated in the following code sample.
+
+**[XAML]**
+```
+xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+```
+**[C#]**
+```
+using Syncfusion.XForms.TextInputLayout;
+```
+Add any input view control such as Entry, Editor, SfNumericTextBox, SfNumericUpDown, SfMaskedEdit, SfAutoComplete, SfComboBox, Picker,DatePicker or TimePicker and add hint label (floating label).
+
+**[XAML]**
+```
+<inputLayout:SfTextInputLayout>
+   <Entry />
+</inputLayout:SfTextInputLayout>
+```
+**[C#]**
+```
+var inputLayout = new SfTextInputLayout();
+inputLayout.InputView = new Entry();
+```
 # How to validate with required verification in text input layout in Xamarin.Forms
-This article explains How to validate with required verification in text input layout in Xamarin.Forms 
+we are going to highlight the inputview when the user provided input is empty using the HasError  and ErrorText property in TextInputLayout.
 
-The SfTextInputLayout is Syncfusion UI component that helps to add decorative elements such as floating labels, icons, and assistive labels on the top of input views.
-
-When developing applications, a good UX practice involves the application to provide feedback to the user when the input is empty or invalid.
-
-In this article, we are going to highlight the inputview when the user provided input is empty using the HasError  and ErrorText property in TextInputLayout.
-
-The output of the application will be something like this:
-
-![validate with required verification](Output.jpg)
-
-As you can above, I’m highlighting the border of TextInputLayout with a different color using ErrorColor  and also the error message is displaying below the inputview to fill the input field.
-
-# Creating the above UI
-
-You can achieve the above UI using the below code snippet
-
-[XAML]
+**[XAML]**
 
 ```
 <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="15">
@@ -58,14 +82,14 @@ You can achieve the above UI using the below code snippet
                 WidthRequest="100" HorizontalOptions="Center"/>
     </StackLayout> 
 ```
+## How to run this application?
 
+To run this application, you need to first clone the How-to-validate-with-required-verification-in-text-input-layout-in-Xamarin.Forms repository and then open it in Visual Studio 2022. Now, simply build and run your project to view the output.
 
-# See Also
+## <a name="troubleshooting"></a>Troubleshooting ##
+### Path too long exception
+If you are facing path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
 
-[How to change cursor color in text input layout](https://www.syncfusion.com/kb/11608/how-to-change-the-cursor-color-in-xamarin-forms-text-input-layout)
+## License
 
-[How to change error color](https://help.syncfusion.com/xamarin/text-input-layout/states-and-colors#error-color)
-
-[How to set the Assistive labels](https://help.syncfusion.com/xamarin/text-input-layout/assistive-labels)
-
-
+Syncfusion has no liability for any damage or consequence that may arise by using or viewing the samples. The samples are for demonstrative purposes, and if you choose to use or access the samples, you agree to not hold Syncfusion liable, in any form, for any damage that is related to use, for accessing, or viewing the samples. By accessing, viewing, or seeing the samples, you acknowledge and agree Syncfusion’s samples will not allow you seek injunctive relief in any form for any claim related to the sample. If you do not agree to this, do not view, access, utilize, or otherwise do anything with Syncfusion’s samples.
