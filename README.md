@@ -13,7 +13,7 @@ The output of the application will be something like this:
 
 As you can above, I’m highlighting the border of TextInputLayout with a different color using ErrorColor  and also the error message is displaying below the inputview to fill the input field.
 
-# Creating the above UI
+## Creating the above UI
 
 You can achieve the above UI using the below code snippet
 
@@ -60,7 +60,7 @@ You can achieve the above UI using the below code snippet
 ```
 
 
-# See Also
+## See Also
 
 [How to change cursor color in text input layout](https://www.syncfusion.com/kb/11608/how-to-change-the-cursor-color-in-xamarin-forms-text-input-layout)
 
